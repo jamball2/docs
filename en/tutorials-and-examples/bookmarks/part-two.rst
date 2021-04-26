@@ -228,7 +228,7 @@ like::
 
     public function add()
     {
-        $bookmark = $this->Bookmarks->newEntity();
+        $bookmark = $this->Bookmarks->newEmptyEntity();
         if ($this->request->is('post')) {
             $bookmark = $this->Bookmarks->patchEntity($bookmark, $this->request->getData());
             $bookmark->user_id = $this->Auth->user('id');
